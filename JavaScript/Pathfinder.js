@@ -7,7 +7,7 @@ class Pathfinder {
         this.closedSet = [];
 
         this.step = false;
-        this.delay = 200;
+        this.delay = 50;
     }
 
     reset() {
