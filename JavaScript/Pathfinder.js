@@ -51,8 +51,6 @@ class Pathfinder {
             }
         });
 
-        console.log(min);
-
         return res;
     }
 
