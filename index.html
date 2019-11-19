@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<head>
+    <title>Bert</title>
+    <link rel="icon" href="https://img.icons8.com/plasticine/100/000000/filled-trash.png">
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+
+        <h1>RENS</h1>
+    <div class="container">
+
+        <div class="speed">
+            <a id="clear">Clear</a>
+            <a id="trage-rens-knop">Vertraag Rens</a>
+            <input type="range" min="10" max="1000" value="200" class="slider" id="rens-snelheid">
+            <span id="range-text">200</span>
+        </div>
+        
+        <canvas id="cvs" width="1280" height="704"></canvas>
+    </div>
+    
+    <script src="JavaScript/Input.js"></script>
+    <script src="JavaScript/Pathfinder.js"></script>
+    <script src="JavaScript/Edge.js"></script>
+    <script src="JavaScript/Vertex.js"></script>    
+    <script src="JavaScript/Main.js"></script>
+</body>
