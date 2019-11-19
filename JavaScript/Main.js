@@ -22,11 +22,6 @@ window.addEventListener('mousemove', (e) => {
 
 canvas.addEventListener('contextmenu', event => event.preventDefault())
 
-//Key handling
-// window.addEventListener('keydown', input.onKeyDown);
-// window.addEventListener('keyup', input.onKeyUp);
-
-
 const TILESIZE = 32;
 const UPS = 60;
 
@@ -34,11 +29,8 @@ var vertices = [];
 var rows = Math.floor(canvas.clientWidth / TILESIZE);
 var columns = Math.floor(canvas.clientHeight / TILESIZE);
 
-load();
-
-var edges = [];
-
 var rens = new Pathfinder();
+load();
 
 var MODES = {
     selectingStart: 1,
@@ -116,12 +108,7 @@ function addVertices() {
 
 function gaatRensRennenOfNiet() {
     rens.step ^= true;
-
-    if (this.classList.contains("active")) {
-        this.classList.remove("active");
-    } else {
-        this.classList.add("active");
-    }
+    this.classList.toggle("active");
 }
 
 function clearScreen() {
@@ -142,7 +129,6 @@ function clearScreen() {
 }
 
 function veranderRensZijnSnelheid() {
-    //🍕
     rens.delay = document.getElementById("rens-snelheid").value;
     document.getElementById("range-text").innerText = rens.delay;
 }
@@ -168,6 +154,8 @@ function load() {
                 vertices[r][c].state = json[r][c].state;
             }
         }
+
+        rens.reset();
     }
 }
 
